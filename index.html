@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exprove Passport Limited | Your Journey. Our Priority.</title>
+  <meta name="description" content="Ghana's most trusted passport processing and birth certificate assistance company. Fast, reliable, and stress-free."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <header id="navbar">
+    <div class="nav-container">
+
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <!-- SVG Globe + Plane Logo — matches flyer exactly -->
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="46" r="28" fill="none" stroke="#c8a84b" stroke-width="3"/>
+            <ellipse cx="42" cy="46" rx="12" ry="28" fill="none" stroke="#c8a84b" stroke-width="2"/>
+            <line x1="14" y1="46" x2="70" y2="46" stroke="#c8a84b" stroke-width="2"/>
+            <line x1="17" y1="33" x2="67" y2="33" stroke="#c8a84b" stroke-width="1.5"/>
+            <line x1="17" y1="59" x2="67" y2="59" stroke="#c8a84b" stroke-width="1.5"/>
+            <!-- Airplane -->
+            <g transform="translate(52,14) rotate(40)">
+              <path d="M0 0 L-6 4 L0 2 L6 4 Z" fill="#ffffff"/>
+              <path d="M-3 2 L-6 7 L0 5 Z" fill="rgba(255,255,255,0.6)"/>
+              <path d="M3 2 L6 7 L0 5 Z" fill="rgba(255,255,255,0.6)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-main">EXPROVE</span>
+          <span class="logo-sub">PASSPORT LIMITED</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#apply" class="btn-nav">Apply Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" onclick="closeMobile()">Home</a>
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#services" onclick="closeMobile()">Services</a>
+      <a href="#gallery" onclick="closeMobile()">Gallery</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+      <a href="#apply" class="btn-mobile-apply" onclick="closeMobile()">Apply Now</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section class="hero" id="home">
+
+      <!-- 🖼️ HERO BACKGROUND IMAGE — replace src with your chosen photo -->
+      <div class="hero-bg">
+        <img
+          src="image/grouppic.jpeg"
+          alt="Airplane in sky"
+          class="hero-bg-img"
+          id="HERO_BG_IMAGE"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          Ghana's Trusted Passport Agency
+        </div>
+
+        <h1 class="hero-title reveal">
+          Your Journey.<br/>
+          <em>Our Priority.</em>
+        </h1>
+
+        <p class="hero-sub reveal">
+          We make passport processing and birth certificate assistance
+          simple, fast and stress-free — so you can focus on your journey.
+        </p>
+
+        <div class="hero-ctas reveal">
+          <a href="https://forms.gle/sgE6YUdHEyh1s8BA6" target="_blank" class="btn-gold">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="11" r="3"/></svg>
+            Passport Application
+          </a>
+          <a href="https://forms.gle/DcFDz64M7aQdDJXK6" target="_blank" class="btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Birth Certificate
+          </a>
+        </div>
+
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <strong>500+</strong>
+            <span>Clients Served</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>99%</strong>
+            <span>Success Rate</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>24h</strong>
+            <span>Response Time</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         TRUST BAR
+    ═══════════════════════════════════════ -->
+    <div class="trust-bar">
+      <div class="trust-inner">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Reliable & Trusted</span>
+        </div>
+        <div class="trust-dot">✦</div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Fast Processing</span>
+        </div>
+        <div class="trust-dot">✦</div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Document Verified</span>
+        </div>
+        <div class="trust-dot">✦</div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Expert Team</span>
+        </div>
+        <div class="trust-dot">✦</div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72"/></svg>
+          <span>Always Available</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════ -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-images">
+            <!-- 🖼️ ABOUT IMAGE 1 — replace src with your office/team photo -->
+            <div class="about-img-main reveal-left">
+              <img
+                src="image/mick.png"
+                alt="Professional team"
+                id="ABOUT_IMAGE_1"
+              />
+              <div class="about-img-badge">
+                <strong>Michael Atta Antwi. 2026</strong>
+                <strong>C.E.O</strong>
+                <span>Mampong-Nsuta, Ashanti Region, Ghana</span>
+              </div>
+            </div>
+            <!-- 🖼️ ABOUT IMAGE 2 — replace src with your passport/document photo -->
+            <div class="about-img-secondary reveal-left" style="--delay:0.2s">
+              <img
+                src="image/processing.jpeg"
+                alt="Passport documents"
+                id="ABOUT_IMAGE_2"
+              />
+            </div>
+          </div>
+
+          <div class="about-content reveal-right">
+            <span class="label">About Us</span>
+            <h2 class="section-title">Opening Doors to<br/><em>Your Global Opportunities</em></h2>
+            <p class="about-lead">
+              At Exprove Passport Limited, we believe every journey begins with the right documents. We are Ghana's premier passport and birth certificate assistance company, dedicated to making your documentation process seamless.
+            </p>
+            <p class="about-body">
+              Based in Accra, Greater Accra Region, our team of experienced professionals guides you through every step — from form completion and document verification to appointment booking and final submission. We handle the complexity so you don't have to.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <strong>Reliable</strong>
+                  <p>Count on us every step of the way.</p>
+                </div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <div>
+                  <strong>Efficient</strong>
+                  <p>Fast processing, zero unnecessary delays.</p>
+                </div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <div>
+                  <strong>Trusted</strong>
+                  <p>Hundreds of satisfied clients trust us.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         APPLY (Main CTA Cards)
+    ═══════════════════════════════════════ -->
+    <section class="apply-section" id="apply">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Get Started Today</span>
+          <h2 class="section-title">Apply for <em>Assistance</em></h2>
+          <p>Choose your service and begin your application in minutes.</p>
+        </div>
+
+        <div class="apply-cards">
+
+          <!-- PASSPORT CARD -->
+          <div class="apply-card passport reveal-left">
+            <div class="apply-card-ribbon">Most Popular</div>
+
+            <!-- 🖼️ PASSPORT CARD IMAGE — replace src with your passport photo -->
+            <div class="apply-card-img">
+              <img
+                src="image/pasport.png"
+                alt="Passport"
+                id="PASSPORT_CARD_IMAGE"
+              />
+              <div class="apply-card-img-overlay">
+                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="white" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="11" r="3"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+              </div>
+            </div>
+
+            <div class="apply-card-body">
+              <h3>Passport Assistance</h3>
+              <p>New application or renewal — we guide you from start to finish with expert support throughout the entire process.</p>
+              <ul class="feature-list">
+                <li>New Passport Application</li>
+                <li>Passport Renewal</li>
+                <li>Document Check & Verification</li>
+                <li>Appointment Booking</li>
+                <li>General Travel Advisory</li>
+              </ul>
+              <a href="https://forms.gle/sgE6YUdHEyh1s8BA6" target="_blank" class="apply-btn passport-btn">
+                Apply for Passport
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- BIRTH CERTIFICATE CARD -->
+          <div class="apply-card birth reveal-right">
+
+            <!-- 🖼️ BIRTH CERT CARD IMAGE — replace src with your document photo -->
+            <div class="apply-card-img">
+              <img
+                src="image/birth cirt.png"
+                alt="Birth Certificate Documents"
+                id="BIRTH_CERT_IMAGE"
+              />
+              <div class="apply-card-img-overlay birth-overlay">
+                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="white" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+              </div>
+            </div>
+
+            <div class="apply-card-body">
+              <h3>Birth Certificate Assistance</h3>
+              <p>Obtain your official Republic of Ghana birth certificate quickly and hassle-free with our expert registry liaison support.</p>
+              <ul class="feature-list">
+                <li>Birth Certificate Application</li>
+                <li>Certified Copy of Entry</li>
+                <li>Registry Liaison Support</li>
+                <li>Document Verification</li>
+                <li>Births &amp; Deaths Registration</li>
+              </ul>
+              <a href="https://forms.gle/DcFDz64M7aQdDJXK6" target="_blank" class="apply-btn birth-btn">
+                Apply for Birth Certificate
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SERVICES
+    ═══════════════════════════════════════ -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">What We Offer</span>
+          <h2 class="section-title">Our <em>Services</em></h2>
+          <p>Comprehensive support at every stage of your documentation journey.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-num">01</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="11" r="3"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+            </div>
+            <h4>New Passport Application</h4>
+            <p>We guide you through the entire application process — forms, photos, documents, and submission. Stress-free from day one.</p>
+          </div>
+          <div class="service-card reveal" style="--delay:0.1s">
+            <div class="service-num">02</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            </div>
+            <h4>Passport Renewal</h4>
+            <p>Fast and easy renewal services with minimal disruption to your travel plans. We keep the process moving.</p>
+          </div>
+          <div class="service-card reveal" style="--delay:0.2s">
+            <div class="service-num">03</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <h4>Document Check & Assistance</h4>
+            <p>We ensure your documents are complete, correct, and properly formatted before any submission.</p>
+          </div>
+          <div class="service-card reveal" style="--delay:0.3s">
+            <div class="service-num">04</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h4>Appointment Booking</h4>
+            <p>We help you secure your appointment at the right time with the right office — no wasted trips.</p>
+          </div>
+          <div class="service-card reveal" style="--delay:0.4s">
+            <div class="service-num">05</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h4>Birth Certificate Assistance</h4>
+            <p>Obtain your official Republic of Ghana birth certificate quickly, correctly, and without the stress.</p>
+          </div>
+          <div class="service-card reveal" style="--delay:0.5s">
+            <div class="service-num">06</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h4>General Travel Advisory</h4>
+            <p>Professional guidance for a smooth, well-planned travel experience. We help you prepare for the journey ahead.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         GALLERY — INSERT YOUR PHOTOS HERE
+    ═══════════════════════════════════════ -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Our Gallery</span>
+          <h2 class="section-title">See Us <em>In Action</em></h2>
+          <p>A glimpse into our office, team, and the clients we proudly serve.</p>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+
+        <!-- 🖼️ GALLERY IMAGE 1 — replace src with your preferred photo -->
+        <div class="gallery-item gallery-large reveal-left" id="GALLERY_1">
+          <img src="image/grouppic.jpeg" alt="Office"/>
+          <div class="gallery-caption">Our Professional Team</div>
+        </div>
+
+        <!-- 🖼️ GALLERY IMAGE 2 — replace src with your preferred photo -->
+        <div class="gallery-item reveal" style="--delay:0.1s" id="GALLERY_2">
+          <img src="image/processing.jpeg" alt="Services"/>
+          <div class="gallery-caption">Document Processing</div>
+        </div>
+
+        <!-- 🖼️ GALLERY IMAGE 3 — replace src with your preferred photo -->
+        <div class="gallery-item reveal" style="--delay:0.2s" id="GALLERY_3">
+          <img src="image/Travel.png" alt="Travel"/>
+          <div class="gallery-caption">Your Journey Starts Here</div>
+        </div>
+
+        <!-- 🖼️ GALLERY IMAGE 4 — replace src with your preferred photo -->
+        <div class="gallery-item reveal-right" style="--delay:0.1s" id="GALLERY_4">
+          <img src="image/done.png" alt="Documents"/>
+          <div class="gallery-caption">Passport Assistance</div>
+        </div>
+
+        <!-- 🖼️ GALLERY IMAGE 5 — replace src with your preferred photo -->
+        <div class="gallery-item gallery-wide reveal" style="--delay:0.3s" id="GALLERY_5">
+          <img src="image/OFFICE.png" alt="Office space"/>
+          <div class="gallery-caption">Our Ashanti Mampong</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════ -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Client Reviews</span>
+          <h2 class="section-title">What Our <em>Clients Say</em></h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <!-- 🖼️ CLIENT PHOTO 1 — replace src with client photo -->
+            <div class="client-avatar">
+              <img src="image/work.jpeg" alt="Client" id="CLIENT_1"/>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Exprove made my passport renewal process incredibly smooth. I got my new passport faster than I ever expected. Highly recommended!"</p>
+            <strong>Ama Owusu</strong>
+            <span>Passport Renewal</span>
+          </div>
+          <div class="testimonial-card reveal" style="--delay:0.15s">
+            <!-- 🖼️ CLIENT PHOTO 2 — replace src with client photo -->
+            <div class="client-avatar">
+              <img src="image/dope.jpg" alt="Client" id="CLIENT_2"/>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"I needed my child's birth certificate urgently. The team at Exprove handled everything professionally and delivered in record time."</p>
+            <strong>Kwame Mensah</strong>
+            <span>Birth Certificate</span>
+          </div>
+          <div class="testimonial-card reveal" style="--delay:0.3s">
+            <!-- 🖼️ CLIENT PHOTO 3 — replace src with client photo -->
+            <div class="client-avatar">
+              <img src="image/images.jpg" alt="Client" id="CLIENT_3"/>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>"Very professional service. They checked all my documents and booked my appointment. Everything went perfectly on the day."</p>
+            <strong>Efua Asante</strong>
+            <span>New Passport</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════ -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info reveal-left">
+            <span class="label label-light">Get In Touch</span>
+            <h2 class="section-title light">Contact <em>Us</em></h2>
+            <p class="contact-lead">Have questions? Our team is ready to assist you. Reach out and we'll respond within 24 hours.</p>
+
+            <div class="contact-cards">
+              <a href="tel:0500639478" class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <strong>Phone</strong>
+                  <span>0500639478</span>
+                </div>
+              </a>
+              <a href="mailto:michaelattaantwi5213@gmail.com" class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <span>michaelattaantwi5213@gmail.com</span>
+                </div>
+              </a>
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <strong>Location</strong>
+                  <span>Mampong-Nsuta, Ashanti Region, Ghana</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Apply Buttons in Contact -->
+            <div class="quick-apply">
+              <p>Ready to apply?</p>
+              <a href="https://forms.gle/sgE6YUdHEyh1s8BA6" target="_blank" class="btn-gold">Passport Form</a>
+              <a href="https://forms.gle/DcFDz64M7aQdDJXK6" target="_blank" class="btn-ghost">Birth Certificate Form</a>
+            </div>
+          </div>
+
+          <!-- INQUIRY FORM -->
+          <div class="contact-form-wrap reveal-right">
+            <h3>Send an Inquiry</h3>
+            <p>Fill in the form and we'll get back to you promptly.</p>
+
+            <div id="formSuccess" class="form-success" style="display:none">
+              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#2d7a3e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <strong>Message Sent!</strong>
+              <p>We'll be in touch within 24 hours.</p>
+            </div>
+
+            <form id="inquiryForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">Full Name *</label>
+                  <input type="text" id="fname" placeholder="Your full name" required/>
+                </div>
+                <div class="form-group">
+                  <label for="fphone">Phone Number</label>
+                  <input type="tel" id="fphone" placeholder="e.g. 0244 000 000"/>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="femail">Email Address *</label>
+                <input type="email" id="femail" placeholder="your@email.com" required/>
+              </div>
+              <div class="form-group">
+                <label for="fservice">Service Needed *</label>
+                <select id="fservice" required>
+                  <option value="">Select a service…</option>
+                  <option>New Passport Application</option>
+                  <option>Passport Renewal</option>
+                  <option>Birth Certificate Assistance</option>
+                  <option>Document Check &amp; Assistance</option>
+                  <option>Appointment Booking Support</option>
+                  <option>General Travel Advisory</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="fmsg">Message</label>
+                <textarea id="fmsg" rows="4" placeholder="Tell us about your situation…"></textarea>
+              </div>
+              <button type="submit" class="form-submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+            <circle cx="42" cy="46" r="28" fill="none" stroke="#c8a84b" stroke-width="3"/>
+            <ellipse cx="42" cy="46" rx="12" ry="28" fill="none" stroke="#c8a84b" stroke-width="2"/>
+            <line x1="14" y1="46" x2="70" y2="46" stroke="#c8a84b" stroke-width="2"/>
+            <line x1="17" y1="33" x2="67" y2="33" stroke="#c8a84b" stroke-width="1.5"/>
+            <line x1="17" y1="59" x2="67" y2="59" stroke="#c8a84b" stroke-width="1.5"/>
+            <g transform="translate(52,14) rotate(40)">
+              <path d="M0 0 L-6 4 L0 2 L6 4 Z" fill="#ffffff"/>
+            </g>
+          </svg>
+          <div>
+            <div class="footer-brand-name">EXPROVE</div>
+            <div class="footer-brand-sub">PASSPORT LIMITED</div>
+          </div>
+        </div>
+        <p>Opening doors to your global opportunities. Your Journey. Our Priority.</p>
+        <p class="footer-tagline">We get you there.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="#apply">New Passport Application</a>
+        <a href="#apply">Passport Renewal</a>
+        <a href="#apply">Birth Certificate</a>
+        <a href="#services">Document Check</a>
+        <a href="#services">Travel Advisory</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Apply Now</h5>
+        <a href="https://forms.gle/sgE6YUdHEyh1s8BA6" target="_blank">Passport Application Form</a>
+        <a href="https://forms.gle/DcFDz64M7aQdDJXK6" target="_blank">Birth Certificate Form</a>
+        <a href="#contact">Send an Inquiry</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:0500639478">0500639478</a>
+        <a href="mailto:michaelattaantwi5213@gmail.com">michaelattaantwi5213@gmail.com</a>
+        <span>Mampong-Nsuta, Ashanti Region, Ghana</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Exprove Passport Limited. All rights reserved.</p>
+      <p>Designed with care for your journey ✈</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- EmailJS SDK — sends inquiry form to michaelattaantwi5213@gmail.com -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
