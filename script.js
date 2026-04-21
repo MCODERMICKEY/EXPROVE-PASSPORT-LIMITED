@@ -64,47 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 6. INQUIRY FORM — store & send via EmailJS ── */
 
-  /*
-   * ════════════════════════════════════════════════════
-   * EMAILJS SETUP — 3 steps (one-time, takes 5 minutes)
-   * ════════════════════════════════════════════════════
-   *
-   * STEP 1 — Create a FREE EmailJS account
-   *   → Go to https://www.emailjs.com and sign up (free)
-   *
-   * STEP 2 — Add your Gmail as an Email Service
-   *   → Dashboard → Email Services → Add New Service
-   *   → Choose Gmail → connect michaelattaantwi5213@gmail.com
-   *   → Copy the Service ID  (looks like: service_xxxxxxx)
-   *   → Paste it below as EMAILJS_SERVICE_ID
-   *
-   * STEP 3 — Create an Email Template
-   *   → Dashboard → Email Templates → Create New Template
-   *   → Set "To Email" = michaelattaantwi5213@gmail.com
-   *   → Paste this as the template body:
-   *
-   *       New Inquiry from Exprove Website
-   *
-   *       Name:    {{from_name}}
-   *       Email:   {{from_email}}
-   *       Phone:   {{phone}}
-   *       Service: {{service}}
-   *
-   *       Message:
-   *       {{message}}
-   *
-   *       Submitted: {{submitted_at}}
-   *
-   *   → Save the template
-   *   → Copy the Template ID (looks like: template_xxxxxxx)
-   *   → Paste it below as EMAILJS_TEMPLATE_ID
-   *
-   * STEP 4 — Get your Public Key
-   *   → Dashboard → Account → General → Public Key
-   *   → Paste it below as EMAILJS_PUBLIC_KEY
-   *
-   * ════════════════════════════════════════════════════
-   */
 
   const EMAILJS_SERVICE_ID  = 'service_zce0q0u';   // ← replace with your Service ID
   const EMAILJS_TEMPLATE_ID = 'template_yvy3prj';  // ← replace with your Template ID
