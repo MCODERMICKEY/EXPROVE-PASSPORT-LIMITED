@@ -556,7 +556,7 @@ section { padding: 100px 0; }
 
 .apply-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
@@ -678,6 +678,11 @@ section { padding: 100px 0; }
   color: var(--dark);
 }
 .birth-btn:hover { background: var(--gold-lt); transform: translateY(-1px); }
+.biz-btn {
+  background: linear-gradient(135deg, var(--g-dark), var(--g-mid));
+  color: var(--white);
+}
+.biz-btn:hover { background: linear-gradient(135deg, var(--g-mid), var(--g-light)); transform: translateY(-1px); }
 
 /* ══════════════════════════════════════════════════════
    SERVICES
