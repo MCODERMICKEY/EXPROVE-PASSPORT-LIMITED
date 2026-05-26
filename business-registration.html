@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Registration — Exprove Passport Limited</title>
+  <meta name="description" content="Register your business in Ghana with expert guidance. Sole Proprietorship or Limited Company — Exprove Passport Limited handles it all."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── VARIABLES ── */
+    :root {
+      --g-dark:    #1a5c2a;
+      --g-mid:     #2d7a3e;
+      --g-light:   #3a9c50;
+      --g-pale:    #eaf5ec;
+      --gold:      #c8a84b;
+      --gold-lt:   #e2c97e;
+      --gold-dk:   #a08530;
+      --cream:     #f9f7f2;
+      --white:     #ffffff;
+      --dark:      #0d1f12;
+      --text:      #1e3a26;
+      --text-mid:  #3d5c46;
+      --text-lt:   #6a8a72;
+      --border:    rgba(26,92,42,0.12);
+      --shadow-md: 0 8px 40px rgba(13,31,18,0.12);
+      --shadow-lg: 0 20px 80px rgba(13,31,18,0.18);
+      --radius:    16px;
+      --radius-lg: 28px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ════════════════════════════
+       FESTIVE NOTIFICATION OVERLAY
+    ════════════════════════════ */
+    .festive-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      animation: overlayIn 0.6s ease both;
+    }
+    @keyframes overlayIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    .festive-card {
+      position: relative;
+      max-width: 540px;
+      width: 100%;
+      background: linear-gradient(160deg, #0d2e14 0%, #0a1f0d 60%, #0d2216 100%);
+      border-radius: 28px;
+      padding: 52px 44px 40px;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 40px 120px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,168,75,0.25);
+      animation: cardPop 0.8s cubic-bezier(0.34,1.56,0.64,1) 0.2s both;
+    }
+    @keyframes cardPop {
+      from { opacity: 0; transform: scale(0.8) translateY(30px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    /* Stars / sparkles */
+    .f-stars {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .f-star {
+      position: absolute;
+      width: 3px; height: 3px;
+      background: var(--gold-lt);
+      border-radius: 50%;
+      animation: twinkle var(--dur, 3s) var(--del, 0s) ease-in-out infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50%       { opacity: 1; transform: scale(1.5); }
+    }
+
+    /* Crescent moon */
+    .f-crescent {
+      width: 90px; height: 90px;
+      margin: 0 auto 20px;
+      position: relative;
+      animation: moonGlow 3s ease-in-out infinite;
+    }
+    @keyframes moonGlow {
+      0%, 100% { filter: drop-shadow(0 0 12px rgba(200,168,75,0.5)); }
+      50%       { filter: drop-shadow(0 0 28px rgba(200,168,75,0.9)); }
+    }
+
+    /* Lanterns */
+    .f-lanterns {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .f-lantern {
+      animation: sway 3s ease-in-out infinite;
+    }
+    .f-lantern:nth-child(2) { animation-delay: 0.5s; animation-direction: reverse; }
+    .f-lantern:nth-child(3) { animation-delay: 1s; }
+    @keyframes sway {
+      0%, 100% { transform: rotate(-6deg); }
+      50%       { transform: rotate(6deg); }
+    }
+
+    .f-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200,168,75,0.15);
+      border: 1px solid rgba(200,168,75,0.45);
+      color: var(--gold-lt);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 20px;
+    }
+    .f-badge-dot {
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.3; transform: scale(1.6); }
+    }
+
+    .f-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .f-title em { color: var(--gold-lt); font-style: italic; }
+
+    .f-arabic {
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .f-desc {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      font-weight: 300;
+      max-width: 380px;
+      margin: 0 auto 32px;
+    }
+    .f-desc strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+
+    /* Divider */
+    .f-divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,168,75,0.4), transparent);
+      margin-bottom: 28px;
+    }
+
+    .f-from {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+    .f-from span { color: var(--gold-lt); font-weight: 600; }
+
+    .f-close {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dk));
+      color: var(--dark);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 14px 36px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 20px rgba(200,168,75,0.4);
+      letter-spacing: 0.3px;
+    }
+    .f-close:hover {
+      background: linear-gradient(135deg, var(--gold-lt), var(--gold));
+      transform: translateY(-2px);
+      box-shadow: 0 10px 36px rgba(200,168,75,0.6);
+    }
+
+    /* confetti particles */
+    .f-confetti-wrap {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .confetti-piece {
+      position: absolute;
+      width: 8px; height: 8px;
+      border-radius: 2px;
+      opacity: 0;
+      animation: confettiFall var(--dur, 4s) var(--del, 0s) ease-in infinite;
+    }
+    @keyframes confettiFall {
+      0%   { opacity: 1; transform: translateY(-20px) rotate(0deg); }
+      100% { opacity: 0; transform: translateY(600px) rotate(720deg); }
+    }
+
+    /* ════════════
+       NAVBAR
+    ════════════ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,31,18,0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(200,168,75,0.2);
+    }
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo-icon svg { width: 44px; height: 44px; }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+    .logo-sub {
+      font-size: 0.52rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: var(--gold-lt);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      transition: color var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold-lt); }
+    .btn-nav {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dk));
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 10px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: var(--transition);
+      letter-spacing: 0.3px;
+    }
+    .btn-nav:hover { background: var(--gold-lt); transform: translateY(-1px); }
+
+    /* ════════════
+       HERO BANNER
+    ════════════ */
+    .biz-hero {
+      background: linear-gradient(150deg, var(--g-dark) 0%, #0d2e14 50%, #091a0c 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 100px 32px 80px;
+      text-align: center;
+    }
+    .biz-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(200,168,75,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(26,92,42,0.3) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    /* subtle grid */
+    .biz-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(26,92,42,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,92,42,0.08) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+
+    .biz-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: heroFade 0.9s ease both;
+    }
+    @keyframes heroFade {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200,168,75,0.15);
+      border: 1px solid rgba(200,168,75,0.4);
+      color: var(--gold-lt);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 50px;
+      margin-bottom: 28px;
+    }
+    .hero-badge svg { width: 14px; height: 14px; }
+
+    .biz-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 4.4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+    .biz-hero h1 em { color: var(--gold-lt); font-style: italic; }
+
+    .biz-hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 520px;
+      margin: 0 auto 44px;
+    }
+
+    .hero-steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .hero-step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 12px 22px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+      white-space: nowrap;
+      transition: var(--transition);
+    }
+    .hero-step:hover { background: rgba(200,168,75,0.12); border-color: rgba(200,168,75,0.3); color: var(--gold-lt); }
+    .hero-step-num {
+      width: 22px; height: 22px;
+      background: var(--gold);
+      color: var(--dark);
+      border-radius: 50%;
+      font-size: 0.72rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-arrow {
+      color: rgba(255,255,255,0.2);
+      font-size: 0.9rem;
+      margin: 0 6px;
+    }
+
+    /* ════════════
+       CHOOSE SECTION
+    ════════════ */
+    .choose-section {
+      padding: 90px 32px 100px;
+      background: var(--cream);
+    }
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 60px;
+    }
+    .label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--g-mid);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .section-title em { color: var(--g-mid); font-style: normal; }
+    .section-sub {
+      color: var(--text-lt);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    /* ── Service Cards ── */
+    .biz-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .biz-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1.5px solid transparent;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .biz-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(200,168,75,0.35);
+    }
+
+    /* Card top color band */
+    .biz-card-band {
+      height: 6px;
+      width: 100%;
+    }
+    .biz-card.sole .biz-card-band { background: linear-gradient(90deg, var(--g-dark), var(--g-light)); }
+    .biz-card.limited .biz-card-band { background: linear-gradient(90deg, var(--gold-dk), var(--gold-lt)); }
+
+    .biz-card-body {
+      padding: 36px 36px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .biz-card-icon {
+      width: 68px; height: 68px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      flex-shrink: 0;
+    }
+    .biz-card.sole .biz-card-icon { background: var(--g-pale); }
+    .biz-card.sole .biz-card-icon svg { stroke: var(--g-dark); }
+    .biz-card.limited .biz-card-icon { background: #fdf8ec; }
+    .biz-card.limited .biz-card-icon svg { stroke: var(--gold-dk); }
+    .biz-card-icon svg { width: 34px; height: 34px; }
+
+    .biz-card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+    .biz-card.sole .biz-card-tag { background: var(--g-pale); color: var(--g-dark); }
+    .biz-card.limited .biz-card-tag { background: #fdf8ec; color: var(--gold-dk); }
+
+    .biz-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .biz-card p {
+      color: var(--text-lt);
+      font-size: 0.92rem;
+      line-height: 1.75;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+
+    .biz-features {
+      list-style: none;
+      margin-bottom: 32px;
+      flex: 1;
+    }
+    .biz-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      font-weight: 400;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .biz-features li:last-child { border-bottom: none; }
+    .feature-check {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .biz-card.sole .feature-check { background: var(--g-pale); }
+    .biz-card.sole .feature-check svg { stroke: var(--g-dark); }
+    .biz-card.limited .feature-check { background: #fdf8ec; }
+    .biz-card.limited .feature-check svg { stroke: var(--gold-dk); }
+    .feature-check svg { width: 10px; height: 10px; }
+
+    /* Card CTA */
+    .biz-card-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 28px;
+      border-radius: 50px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: var(--transition);
+      letter-spacing: 0.3px;
+    }
+    .biz-card.sole .biz-card-btn {
+      background: linear-gradient(135deg, var(--g-dark), var(--g-mid));
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(26,92,42,0.3);
+    }
+    .biz-card.sole .biz-card-btn:hover {
+      background: linear-gradient(135deg, var(--g-mid), var(--g-light));
+      transform: translateY(-2px);
+      box-shadow: 0 10px 36px rgba(26,92,42,0.5);
+    }
+    .biz-card.limited .biz-card-btn {
+      background: linear-gradient(135deg, var(--gold-dk), var(--gold));
+      color: var(--dark);
+      box-shadow: 0 4px 20px rgba(200,168,75,0.35);
+    }
+    .biz-card.limited .biz-card-btn:hover {
+      background: linear-gradient(135deg, var(--gold), var(--gold-lt));
+      transform: translateY(-2px);
+      box-shadow: 0 10px 36px rgba(200,168,75,0.55);
+    }
+
+    /* ── Info strip ── */
+    .info-strip {
+      background: var(--g-pale);
+      border-top: 1px solid rgba(26,92,42,0.1);
+      padding: 48px 32px;
+    }
+    .info-strip-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .info-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm, 0 2px 12px rgba(13,31,18,0.08));
+      flex-shrink: 0;
+    }
+    .info-icon svg { width: 20px; height: 20px; stroke: var(--g-dark); }
+    .info-text { display: flex; flex-direction: column; }
+    .info-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-lt); margin-bottom: 2px; }
+    .info-value { font-size: 0.95rem; font-weight: 600; color: var(--text); }
+
+    /* ── FOOTER ── */
+    .biz-footer {
+      background: var(--dark);
+      padding: 32px;
+      text-align: center;
+    }
+    .biz-footer p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.3);
+    }
+    .biz-footer a {
+      color: var(--gold-lt);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .biz-footer a:hover { color: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 760px) {
+      .biz-cards { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .nav-container { padding: 0 20px; }
+      .biz-hero { padding: 70px 20px 60px; }
+      .hero-steps { gap: 6px; }
+      .hero-step { font-size: 0.75rem; padding: 10px 16px; }
+      .choose-section { padding: 60px 20px 70px; }
+      .biz-card-body { padding: 24px 22px 22px; }
+      .festive-card { padding: 40px 24px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       EID AL-ADHA FESTIVE NOTIFICATION
+  ══════════════════════════════════ -->
+  <div class="festive-overlay" id="festiveOverlay">
+    <div class="festive-card" id="festiveCard">
+
+      <!-- Stars -->
+      <div class="f-stars" id="starsWrap"></div>
+
+      <!-- Confetti -->
+      <div class="f-confetti-wrap" id="confettiWrap"></div>
+
+      <!-- Lanterns -->
+      <div class="f-lanterns">
+        <div class="f-lantern">
+          <svg width="28" height="44" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="14" y1="0" x2="14" y2="5" stroke="#c8a84b" stroke-width="1.5"/>
+            <rect x="3" y="5" width="22" height="30" rx="11" fill="none" stroke="#c8a84b" stroke-width="1.5"/>
+            <rect x="3" y="5" width="22" height="30" rx="11" fill="rgba(200,168,75,0.15)"/>
+            <line x1="14" y1="5" x2="14" y2="35" stroke="rgba(200,168,75,0.4)" stroke-width="1"/>
+            <line x1="3" y1="20" x2="25" y2="20" stroke="rgba(200,168,75,0.4)" stroke-width="1"/>
+            <rect x="9" y="35" width="10" height="5" rx="2" fill="#c8a84b" fill-opacity="0.6"/>
+            <circle cx="14" cy="20" r="4" fill="rgba(200,168,75,0.5)"/>
+          </svg>
+        </div>
+        <div class="f-lantern">
+          <svg width="32" height="50" viewBox="0 0 32 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="16" y1="0" x2="16" y2="6" stroke="#e2c97e" stroke-width="1.5"/>
+            <rect x="3" y="6" width="26" height="34" rx="13" fill="none" stroke="#e2c97e" stroke-width="1.5"/>
+            <rect x="3" y="6" width="26" height="34" rx="13" fill="rgba(226,201,126,0.18)"/>
+            <line x1="16" y1="6" x2="16" y2="40" stroke="rgba(226,201,126,0.4)" stroke-width="1"/>
+            <line x1="3" y1="23" x2="29" y2="23" stroke="rgba(226,201,126,0.4)" stroke-width="1"/>
+            <rect x="10" y="40" width="12" height="6" rx="2" fill="#e2c97e" fill-opacity="0.6"/>
+            <circle cx="16" cy="23" r="5" fill="rgba(226,201,126,0.6)"/>
+          </svg>
+        </div>
+        <div class="f-lantern">
+          <svg width="28" height="44" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="14" y1="0" x2="14" y2="5" stroke="#c8a84b" stroke-width="1.5"/>
+            <rect x="3" y="5" width="22" height="30" rx="11" fill="none" stroke="#c8a84b" stroke-width="1.5"/>
+            <rect x="3" y="5" width="22" height="30" rx="11" fill="rgba(200,168,75,0.12)"/>
+            <line x1="14" y1="5" x2="14" y2="35" stroke="rgba(200,168,75,0.4)" stroke-width="1"/>
+            <line x1="3" y1="20" x2="25" y2="20" stroke="rgba(200,168,75,0.4)" stroke-width="1"/>
+            <rect x="9" y="35" width="10" height="5" rx="2" fill="#c8a84b" fill-opacity="0.6"/>
+            <circle cx="14" cy="20" r="4" fill="rgba(200,168,75,0.45)"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Crescent -->
+      <div class="f-crescent">
+        <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M68 45C68 57.15 58.15 67 46 67C33.85 67 24 57.15 24 45C24 32.85 33.85 23 46 23C38.5 27.5 33 35.5 33 45C33 54.5 38.5 62.5 46 67C58.15 67 68 57.15 68 45Z" fill="url(#moonGrad)" opacity="0.9"/>
+          <circle cx="62" cy="28" r="4" fill="#c8a84b" opacity="0.9"/>
+          <circle cx="70" cy="38" r="2.5" fill="#e2c97e" opacity="0.7"/>
+          <circle cx="55" cy="22" r="2" fill="#e2c97e" opacity="0.6"/>
+          <defs>
+            <linearGradient id="moonGrad" x1="24" y1="23" x2="68" y2="67" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#e2c97e"/>
+              <stop offset="100%" stop-color="#c8a84b"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Badge -->
+      <div class="f-badge">
+        <span class="f-badge-dot"></span>
+        Festive Greetings
+      </div>
+
+      <!-- Title -->
+      <h2 class="f-title">Eid al-Adha <em>Mubarak!</em></h2>
+
+      <!-- Arabic greeting -->
+      <p class="f-arabic">عيد أضحى مبارك</p>
+
+      <div class="f-divider"></div>
+
+      <!-- Message -->
+      <p class="f-desc">
+        On this blessed day of <strong>Eid al-Adha</strong>, we extend our warmest
+        wishes to all celebrating. May this joyous occasion bring you
+        peace, prosperity, and endless blessings to you and your loved ones.
+      </p>
+
+      <!-- From -->
+      <p class="f-from">With love from <span>Exprove Passport Limited</span> 🌙</p>
+
+      <!-- Close -->
+      <button class="f-close" onclick="closeGreeting()">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Continue to Our Services
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════
+       NAVBAR
+  ══════ -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="46" r="28" fill="none" stroke="#c8a84b" stroke-width="3"/>
+            <ellipse cx="42" cy="46" rx="12" ry="28" fill="none" stroke="#c8a84b" stroke-width="2"/>
+            <line x1="14" y1="46" x2="70" y2="46" stroke="#c8a84b" stroke-width="2"/>
+            <line x1="17" y1="33" x2="67" y2="33" stroke="#c8a84b" stroke-width="1.5"/>
+            <line x1="17" y1="59" x2="67" y2="59" stroke="#c8a84b" stroke-width="1.5"/>
+            <g transform="translate(52,14) rotate(40)">
+              <path d="M0 0 L-6 4 L0 2 L6 4 Z" fill="#ffffff"/>
+              <path d="M-3 2 L-6 7 L0 5 Z" fill="rgba(255,255,255,0.6)"/>
+              <path d="M3 2 L6 7 L0 5 Z" fill="rgba(255,255,255,0.6)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-main">EXPROVE</span>
+          <span class="logo-sub">PASSPORT LIMITED</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <a href="index.html#apply" class="btn-nav">Apply Now</a>
+    </div>
+  </header>
+
+  <!-- ══════════
+       HERO
+  ══════════ -->
+  <section class="biz-hero">
+    <div class="biz-hero-inner">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+        Business Registration
+      </div>
+      <h1>Register Your Business<br/>in <em>Ghana Today</em></h1>
+      <p>We guide you through every step of the registration process — from business name search to certification. Choose the structure that suits your goals.</p>
+      <div class="hero-steps">
+        <div class="hero-step">
+          <span class="hero-step-num">1</span>
+          Choose Structure
+        </div>
+        <span class="step-arrow">›</span>
+        <div class="hero-step">
+          <span class="hero-step-num">2</span>
+          Submit Documents
+        </div>
+        <span class="step-arrow">›</span>
+        <div class="hero-step">
+          <span class="hero-step-num">3</span>
+          We Process It
+        </div>
+        <span class="step-arrow">›</span>
+        <div class="hero-step">
+          <span class="hero-step-num">4</span>
+          Get Certified
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════
+       CHOOSE YOUR PATH
+  ══════════════════ -->
+  <section class="choose-section">
+    <div style="max-width:1060px;margin:0 auto;">
+      <div class="section-header">
+        <span class="label">Choose Your Path</span>
+        <h2 class="section-title">Which <em>Registration</em> Do You Need?</h2>
+        <p class="section-sub">Select the business structure that best fits your needs and let our team handle the rest with speed and professionalism.</p>
+      </div>
+
+      <div class="biz-cards">
+
+        <!-- ── SOLE PROPRIETORSHIP ── -->
+        <div class="biz-card sole">
+          <div class="biz-card-band"></div>
+          <div class="biz-card-body">
+            <div class="biz-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div class="biz-card-tag">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Individual Owner
+            </div>
+            <h3>Sole Proprietorship Registration</h3>
+            <p>The simplest business structure — owned and operated by one person. Ideal for freelancers, traders, and small businesses looking to formalise quickly.</p>
+            <ul class="biz-features">
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Business Name Search & Registration
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Tax Identification Number (TIN)
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Certificate of Incorporation
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Document Preparation & Filing
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Registrar-General Liaison
+              </li>
+            </ul>
+            <a href="maintenance-sole.html" class="biz-card-btn">
+              Register as Sole Proprietor
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ── LIMITED COMPANY ── -->
+        <div class="biz-card limited">
+          <div class="biz-card-band"></div>
+          <div class="biz-card-body">
+            <div class="biz-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                <line x1="8" y1="14" x2="8" y2="14"/>
+                <line x1="12" y1="14" x2="12" y2="14"/>
+                <line x1="16" y1="14" x2="16" y2="14"/>
+              </svg>
+            </div>
+            <div class="biz-card-tag">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Corporate Structure
+            </div>
+            <h3>Limited Company Registration</h3>
+            <p>A formal corporate entity with limited liability for shareholders. Best suited for growing businesses, investors, and ventures seeking credibility.</p>
+            <ul class="biz-features">
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Company Name Availability Search
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Memorandum & Articles of Association
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Certificate of Incorporation
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Shareholder & Director Registration
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Ghana Revenue Authority (GRA) Filing
+              </li>
+            </ul>
+            <a href="maintenance-limited.html" class="biz-card-btn">
+              Register as Limited Company
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Info Strip ── -->
+  <div class="info-strip">
+    <div class="info-strip-inner">
+      <div class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Processing Time</span>
+          <span class="info-value">5 – 10 Working Days</span>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Need Help?</span>
+          <span class="info-value">0500 639 478 / 0599 230 475</span>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Location</span>
+          <span class="info-value">Mampong- Nsuta, Ashanti Region, Ghana</span>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Success Rate</span>
+          <span class="info-value">99% Approved</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="biz-footer">
+    <p>© 2026 Exprove Passport Limited &nbsp;|&nbsp; <a href="index.html">Back to Home</a> &nbsp;|&nbsp; <a href="tel:0500639478">0500 639 478 / 0599 230 475</a></p>
+  </footer>
+
+  <script>
+    // ── Close Festive Overlay ──
+    function closeGreeting() {
+      const overlay = document.getElementById('festiveOverlay');
+      overlay.style.transition = 'opacity 0.5s ease';
+      overlay.style.opacity = '0';
+      setTimeout(() => overlay.remove(), 500);
+    }
+
+    // ── Generate twinkling stars ──
+    const starsWrap = document.getElementById('starsWrap');
+    for (let i = 0; i < 30; i++) {
+      const star = document.createElement('div');
+      star.className = 'f-star';
+      star.style.cssText = `
+        left: ${Math.random()*100}%;
+        top: ${Math.random()*100}%;
+        --dur: ${2 + Math.random()*3}s;
+        --del: ${Math.random()*4}s;
+        width: ${2+Math.random()*3}px;
+        height: ${2+Math.random()*3}px;
+      `;
+      starsWrap.appendChild(star);
+    }
+
+    // ── Generate confetti ──
+    const confettiWrap = document.getElementById('confettiWrap');
+    const confettiColors = ['#c8a84b','#e2c97e','#3a9c50','#ffffff','#a08530','#2d7a3e'];
+    for (let i = 0; i < 24; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'confetti-piece';
+      const color = confettiColors[Math.floor(Math.random()*confettiColors.length)];
+      piece.style.cssText = `
+        left: ${Math.random()*100}%;
+        top: -10px;
+        background: ${color};
+        --dur: ${3+Math.random()*4}s;
+        --del: ${Math.random()*3}s;
+        width: ${6+Math.random()*8}px;
+        height: ${6+Math.random()*8}px;
+        border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
+        opacity: 0;
+      `;
+      confettiWrap.appendChild(piece);
+    }
+  </script>
+
+</body>
+</html>
