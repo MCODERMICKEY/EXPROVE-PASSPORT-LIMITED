@@ -10,7 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     /* ════════════════════════════
+       FESTIVE NOTIFICATION OVERLAY — COMMENTED OUT
+       Remove the outer /* and *\/ below to re-enable
+    /* ════════════════════════════
        FESTIVE NOTIFICATION OVERLAY
+       (commented out — uncomment to re-enable for festive seasons)
     ════════════════════════════ */
     /*
     .festive-overlay {
@@ -19,7 +23,7 @@
       padding: 20px;
       background: rgba(0,0,0,0.65);
       backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-      animation: overlayIn 0.6s ease both; 
+      animation: overlayIn 0.6s ease both;
     }
     @keyframes overlayIn { from{opacity:0} to{opacity:1} }
 
@@ -123,149 +127,23 @@
     }
     @media(max-width:540px) { .festive-card{padding:36px 22px 30px} }
     */
-  </style> 
-    <style>
-    /*
-    ════════════════════════════════════════
-       CHRISTMAS CELEBRATION OVERLAY — COMMENTED OUT
-       Remove the outer /* and closing *\/ to re-enable at Christmas
-    ════════════════════════════════════════
+  </style>
 
-    .xmas-overlay {
-      position: fixed; inset: 0; z-index: 9999;
-      display: flex; align-items: center; justify-content: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-      animation: xmasOverlayIn 0.6s ease both;
-    }
-    @keyframes xmasOverlayIn { from{opacity:0} to{opacity:1} }
-
-    .xmas-card {
-      position: relative; max-width: 560px; width: 100%;
-      background: linear-gradient(160deg, #0d1f0a 0%, #0a1a08 55%, #1a0a08 100%);
-      border-radius: 28px; padding: 50px 44px 40px;
-      text-align: center; overflow: hidden;
-      box-shadow: 0 40px 120px rgba(0,0,0,0.65), 0 0 0 1px rgba(196,30,58,0.3);
-      animation: xmasCardPop 0.8s cubic-bezier(0.34,1.56,0.64,1) 0.2s both;
-    }
-    @keyframes xmasCardPop {
-      from{opacity:0;transform:scale(0.8) translateY(30px)}
-      to{opacity:1;transform:scale(1) translateY(0)}
-    }
-
-    .xmas-snow { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
-    .xmas-flake {
-      position:absolute;
-      color: rgba(255,255,255,0.85);
-      font-size: var(--size, 14px);
-      animation: snowFall var(--dur,6s) var(--del,0s) linear infinite;
-      user-select:none;
-    }
-    @keyframes snowFall {
-      0%  { transform: translateY(-20px) rotate(0deg); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100%{ transform: translateY(620px) rotate(360deg); opacity: 0; }
-    }
-
-    .xmas-star-wrap {
-      width: 90px; height: 90px; margin: 0 auto 18px;
-      animation: starGlow 2.5s ease-in-out infinite;
-    }
-    @keyframes starGlow {
-      0%,100%{ filter: drop-shadow(0 0 10px rgba(255,215,0,0.5)); }
-      50%     { filter: drop-shadow(0 0 28px rgba(255,215,0,1)); }
-    }
-
-    .xmas-tree-wrap { margin-bottom: 20px; }
-
-    .xmas-badge {
-      display:inline-flex; align-items:center; gap:8px;
-      background: rgba(196,30,58,0.2); border: 1px solid rgba(196,30,58,0.5);
-      color: #ff8a9a; font-size:0.7rem; font-weight:700;
-      letter-spacing:3px; text-transform:uppercase;
-      padding:7px 18px; border-radius:50px; margin-bottom:20px;
-    }
-    .xmas-badge-dot {
-      width:6px; height:6px; background:#c41e3a; border-radius:50%;
-      animation: xpulse 1.8s infinite;
-    }
-    @keyframes xpulse {
-      0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(1.6)}
-    }
-
-    .xmas-title {
-      font-family:'Cormorant Garamond',serif;
-      font-size: clamp(2rem,5vw,3rem); font-weight:700;
-      color: #ffffff; line-height:1.1; margin-bottom:10px;
-    }
-    .xmas-title em { color: #ffd700; font-style:italic; }
-
-    .xmas-subtitle {
-      font-size: 1.1rem; color: rgba(255,255,255,0.5);
-      letter-spacing: 4px; text-transform: uppercase;
-      font-weight: 300; margin-bottom: 20px;
-    }
-
-    .xmas-divider {
-      width:100%; height:1px;
-      background: linear-gradient(90deg,transparent,rgba(196,30,58,0.5),transparent);
-      margin-bottom:24px;
-    }
-
-    .xmas-desc {
-      font-size:0.95rem; color:rgba(255,255,255,0.6);
-      line-height:1.8; font-weight:300;
-      max-width:400px; margin:0 auto 28px;
-    }
-    .xmas-desc strong { color:rgba(255,255,255,0.9); font-weight:600; }
-
-    .xmas-from {
-      font-size:0.78rem; color:rgba(255,255,255,0.3);
-      letter-spacing:1px; margin-bottom:26px;
-    }
-    .xmas-from span { color:#ffd700; font-weight:600; }
-
-    .xmas-close {
-      display:inline-flex; align-items:center; gap:8px;
-      background: linear-gradient(135deg,#c41e3a,#8b0000);
-      color:#ffffff; font-family:'Outfit',sans-serif;
-      font-weight:700; font-size:0.9rem;
-      padding:14px 36px; border-radius:50px; border:none;
-      cursor:pointer; transition:0.3s ease;
-      box-shadow:0 4px 24px rgba(196,30,58,0.5); letter-spacing:0.3px;
-    }
-    .xmas-close:hover {
-      background: linear-gradient(135deg,#e8223f,#c41e3a);
-      transform:translateY(-2px); box-shadow:0 10px 40px rgba(196,30,58,0.7);
-    }
-
-    .xmas-confetti { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
-    .xmas-piece {
-      position:absolute; opacity:0;
-      animation: xconfetti var(--dur,5s) var(--del,0s) ease-in infinite;
-    }
-    @keyframes xconfetti {
-      0%  { opacity:1; transform:translateY(-10px) rotate(0deg); }
-      100%{ opacity:0; transform:translateY(640px) rotate(540deg); }
-    }
-
-    @media(max-width:540px) { .xmas-card{padding:36px 22px 30px} }
-    */
+  <style id="xmas-styles-disabled">
+    /* CHRISTMAS STYLES — DISABLED (remove id to re-enable) */
+    /* Wrapped in impossible media query to deactivate */
   </style>
 </head>
-
-</head> 
 <body>
 
   <!-- ═══════════════════════════════════════
        NAVIGATION
   ═══════════════════════════════════════ -->
   <!-- ══════════════════════════════════
-       EID AL-ADHA FESTIVE NOTIFICATION
+       EID AL-ADHA FESTIVE NOTIFICATION — COMMENTED OUT
+       Remove the HTML comment tags below to re-enable
   ══════════════════════════════════ -->
-  <!--
+  <!--FESTIVE_START
   <div class="festive-overlay" id="festiveOverlay">
     <div class="festive-card" id="festiveCard">
       <div class="f-stars" id="starsWrap"></div>
@@ -328,29 +206,27 @@
       <button class="f-close" onclick="closeGreeting()">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         Enter Our Website
-      </button> 
+      </button>
     </div>
-  </div> -->
-  
- 
- <!-- ══════════════════════════════════════
+  </div>
+  FESTIVE_END-->
+
+  <!-- ══════════════════════════════════════
        CHRISTMAS CELEBRATION — COMMENTED OUT
-       Remove this HTML comment wrapper to re-enable on Christmas
+       Remove the HTML comment tags below to re-enable
   ══════════════════════════════════════ -->
-  <!--   
+  <!-- CHRISTMAS OVERLAY — COMMENTED OUT (remove display:none to re-enable) -->
+  <div id="xmasOverlayWrapper" style="display:none !important;">
   <div class="xmas-overlay" id="xmasOverlay">
-    <div class="xmas-card"> -->
+    <div class="xmas-card">
 
-<!--CHRISTMAS_START
-
-      Snowflakes (generated by JS)
+      <!-- Snowflakes (generated by JS) -->
       <div class="xmas-snow" id="xmasSnow"></div>
 
-       Confetti (generated by JS) 
-      <div class="xmas-confetti" id="xmasConfetti"></div> -->
+      <!-- Confetti (generated by JS) -->
+      <div class="xmas-confetti" id="xmasConfetti"></div>
 
-      <!-- Star on top 
-
+      <!-- Star on top -->
       <div class="xmas-star-wrap">
         <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
           <polygon points="45,5 52,32 80,32 58,50 66,77 45,60 24,77 32,50 10,32 38,32"
@@ -363,65 +239,65 @@
             </linearGradient>
           </defs>
         </svg>
-      </div> -->
+      </div>
 
-      <!-- Christmas Tree 
+      <!-- Christmas Tree -->
       <div class="xmas-tree-wrap">
         <svg width="100" height="90" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Tree layers 
+          <!-- Tree layers -->
           <polygon points="50,2 10,38 28,38" fill="#1a5c2a"/>
           <polygon points="50,2 72,38 90,38" fill="#1a5c2a"/>
           <polygon points="50,12 8,55 92,55" fill="#2d7a3e"/>
-          <polygon points="50,26 4,75 96,75" fill="#3a9c50"/>-->
-          <!-- Trunk 
+          <polygon points="50,26 4,75 96,75" fill="#3a9c50"/>
+          <!-- Trunk -->
           <rect x="43" y="75" width="14" height="14" rx="2" fill="#6b3d1e"/>
-           Baubles.... 
+          <!-- Baubles -->
           <circle cx="35" cy="48" r="4" fill="#c41e3a"/>
           <circle cx="65" cy="48" r="4" fill="#ffd700"/>
           <circle cx="50" cy="60" r="4" fill="#c41e3a"/>
           <circle cx="30" cy="64" r="3.5" fill="#ffd700"/>
           <circle cx="70" cy="64" r="3.5" fill="#ffffff" fill-opacity="0.85"/>
-          <!-- Lights glow 
+          <!-- Lights glow -->
           <circle cx="35" cy="48" r="6" fill="#c41e3a" fill-opacity="0.2"/>
           <circle cx="65" cy="48" r="6" fill="#ffd700" fill-opacity="0.2"/>
           <circle cx="50" cy="60" r="6" fill="#c41e3a" fill-opacity="0.2"/>
         </svg>
       </div>
 
-      <!-- Badge 
+      <!-- Badge -->
       <div class="xmas-badge">
         <span class="xmas-badge-dot"></span>
         Season's Greetings
-      </div> -->
+      </div>
 
-      <!-- Title 
+      <!-- Title -->
       <h2 class="xmas-title">Merry <em>Christmas!</em></h2>
       <p class="xmas-subtitle">✦ &nbsp; Dec 25 &nbsp; ✦</p>
 
-      <div class="xmas-divider"></div> -->
+      <div class="xmas-divider"></div>
 
-      <!-- Message
+      <!-- Message -->
       <p class="xmas-desc">
         Wishing you a season filled with <strong>joy, warmth,</strong> and the company
         of those you love. May this Christmas bring you peace and all the
         blessings of the holiday season.
-      </p>-->
+      </p>
 
       <!-- From -->
-      <!--<p class="xmas-from">Season's greetings from <span>Exprove Passport Limited</span> 🎄</p>
+      <p class="xmas-from">Season's greetings from <span>Exprove Passport Limited</span> 🎄</p>
 
-    
+      <!-- Button -->
       <button class="xmas-close" onclick="closeXmas()">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         Enter Our Website
-      </button> 
+      </button>
 
     </div>
   </div>
-  CHRISTMAS_END -->
+  </div>
+  </div>
 
 
-  
   <header id="navbar">
     <div class="nav-container">
 
@@ -505,16 +381,16 @@
         </h1>
 
         <p class="hero-sub reveal">
-          We make passport processing, birth certificate assistance and business registration 
+          We make passport processing and birth certificate assistance
           simple, fast and stress-free — so you can focus on your journey.
         </p>
 
         <div class="hero-ctas reveal">
-          <a href="https://forms.gle/sgE6YUdHEyh1s8BA6" target="_blank" class="btn-gold">
+          <a href="passport-application.html" class="btn-gold">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="11" r="3"/></svg>
             Passport Application
           </a>
-          <a href="https://forms.gle/DcFDz64M7aQdDJXK6" target="_blank" class="btn-ghost">
+          <a href="https://forms.gle/nagWDjT72VNozgwv9" class="btn-ghost">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             Birth Certificate
           </a>
@@ -615,7 +491,7 @@
             <span class="label">About Us</span>
             <h2 class="section-title">Opening Doors to<br/><em>Your Global Opportunities</em></h2>
             <p class="about-lead">
-              At Exprove Passport Limited, we believe every journey begins with the right documents. We are Ghana's premier passport, birth certificate and business registration assistance company, dedicated to making your documentation process seamless.
+              At Exprove Passport Limited, we believe every journey begins with the right documents. We are Ghana's premier passport and birth certificate assistance company, dedicated to making your documentation process seamless.
             </p>
             <p class="about-body">
               Based in Mampong-Nsuta, Ashanti Region, Ghana, our team of experienced professionals guides you through every step — form completion and document verification to appointment booking and final submission. We handle the complexity so you don't have to.
@@ -694,7 +570,7 @@
                 <li>Appointment Booking</li>
                 <li>General Travel Advisory</li>
               </ul>
-              <a href="https://forms.gle/sgE6YUdHEyh1s8BA6" target="_blank" class="apply-btn passport-btn">
+              <a href="passport-application.html" class="apply-btn passport-btn">
                 Apply for Passport
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
@@ -726,7 +602,7 @@
                 <li>Document Verification</li>
                 <li>Births &amp; Deaths Registration</li>
               </ul>
-              <a href="https://forms.gle/DcFDz64M7aQdDJXK6" target="_blank" class="apply-btn birth-btn">
+              <a href="https://forms.gle/nagWDjT72VNozgwv9" class="apply-btn birth-btn">
                 Apply for Birth Certificate
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
@@ -738,7 +614,7 @@
 
             <div class="apply-card-img">
               <img
-                src="image/bussines_registration.png"
+                src="image/processing.jpeg"
                 alt="Business Registration"
                 id="BIZ_REG_IMAGE"
               />
@@ -978,8 +854,8 @@
             <!-- Quick Apply Buttons in Contact -->
             <div class="quick-apply">
               <p>Ready to apply?</p>
-              <a href="https://forms.gle/sgE6YUdHEyh1s8BA6" target="_blank" class="btn-gold">Passport Form</a>
-              <a href="https://forms.gle/DcFDz64M7aQdDJXK6" target="_blank" class="btn-ghost">Birth Certificate Form</a>
+              <a href="passport-application.html" class="btn-gold">Passport Services</a>
+              <a href="https://forms.gle/nagWDjT72VNozgwv9" class="btn-ghost">Birth Certificate Form</a>
               <a href="business-registration.html" class="btn-ghost">Business Registration</a>
             </div>
           </div>
@@ -1074,17 +950,16 @@
 
       <div class="footer-col">
         <h5>Apply Now</h5>
-        <a href="https://forms.gle/sgE6YUdHEyh1s8BA6" target="_blank">Passport Application Form</a>
-        <a href="https://forms.gle/DcFDz64M7aQdDJXK6" target="_blank">Birth Certificate Form</a>
-        <a href="business-registration.html" target="_blank">Business Registration Forms</a>
+        <a href="passport-application.html">Passport Services</a>
+        <a href="https://forms.gle/nagWDjT72VNozgwv9">Birth Certificate Form</a>
+        <a href="business-registration.html">Business Registration</a>
         <a href="#contact">Send an Inquiry</a>
       </div>
 
       <div class="footer-col">
         <h5>Contact</h5>
-        <a href="tel:0500639478">0500 639 478</a> /
-        <a href="tel:0599230475">0599 230 475</a>
-        <a href="mailto:exprovepassportlimited.2025@gmail.com">exprovepassportlimited.2026@gmail.com</a>
+        <a href="tel:0500639478">0500639478 / 0599230475</a>
+        <a href="mailto:exprovepassportlimited.2025@gmail.com">exprovepassportlimited.2025@gmail.com</a>
         <span>Mampong-Nsuta, Ashanti Region, Ghana</span>
       </div>
     </div>
@@ -1103,6 +978,7 @@
   <!-- EmailJS SDK — sends inquiry form to michaelattaantwi5213@gmail.com -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
+  <!-- FESTIVE JS — COMMENTED OUT: remove these HTML comment tags to re-enable
   <script>
     // ── Festive overlay ──
     function closeGreeting() {
@@ -1125,5 +1001,57 @@
       confettiWrap.appendChild(p);
     }
   </script>
+  FESTIVE JS END -->
+
+  <!-- CHRISTMAS JS — COMMENTED OUT -->
+  <script>
+    /* XMAS JS DISABLED
+    // ── Close Christmas Overlay ──
+    function closeXmas() {
+      const overlay = document.getElementById('xmasOverlay');
+      overlay.style.transition = 'opacity 0.5s ease';
+      overlay.style.opacity = '0';
+      setTimeout(() => overlay.remove(), 500);
+    }
+
+    // ── Generate snowflakes ──
+    const xmasSnow = document.getElementById('xmasSnow');
+    const snowChars = ['❄', '❅', '❆', '·', '•'];
+    for (let i = 0; i < 28; i++) {
+      const flake = document.createElement('div');
+      flake.className = 'xmas-flake';
+      flake.textContent = snowChars[Math.floor(Math.random() * snowChars.length)];
+      flake.style.cssText = `
+        left: ${Math.random() * 100}%;
+        top: -20px;
+        --size: ${10 + Math.random() * 14}px;
+        --dur: ${4 + Math.random() * 5}s;
+        --del: ${Math.random() * 5}s;
+      `;
+      xmasSnow.appendChild(flake);
+    }
+
+    // ── Generate confetti ──
+    const xmasConfetti = document.getElementById('xmasConfetti');
+    const xmasCols = ['#c41e3a','#ffd700','#ffffff','#2d7a3e','#3a9c50','#ff8a9a'];
+    const shapes = ['★','●','▲','■'];
+    for (let i = 0; i < 28; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'xmas-piece';
+      piece.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+      piece.style.cssText = `
+        left: ${Math.random() * 100}%;
+        top: -10px;
+        color: ${xmasCols[Math.floor(Math.random() * xmasCols.length)]};
+        font-size: ${8 + Math.random() * 10}px;
+        --dur: ${4 + Math.random() * 4}s;
+        --del: ${Math.random() * 4}s;
+        opacity: 0;
+      `;
+      xmasConfetti.appendChild(piece);
+    }
+    */
+  </script>
+
 </body>
 </html>
