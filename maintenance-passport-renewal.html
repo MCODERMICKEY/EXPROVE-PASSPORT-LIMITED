@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passport Renewal | Coming Soon — Exprove Passport Limited</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --g-dark:#1a5c2a; --g-mid:#2d7a3e; --g-light:#3a9c50; --g-pale:#eaf5ec;
+      --gold:#c8a84b; --gold-lt:#e2c97e; --gold-dk:#a08530;
+      --cream:#f9f7f2; --white:#ffffff; --dark:#0d1f12;
+      --text:#1e3a26; --text-lt:#6a8a72;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .bg-layer {
+      position: fixed; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse at 50% 30%, rgba(26,92,42,0.4) 0%, transparent 65%),
+        radial-gradient(ellipse at 20% 80%, rgba(26,92,42,0.2) 0%, transparent 50%),
+        linear-gradient(135deg, #0d1f12 0%, #091509 100%);
+    }
+    .bg-grid {
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(26,92,42,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,92,42,0.07) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridDrift 30s linear infinite;
+    }
+    @keyframes gridDrift { from{transform:translateY(0)} to{transform:translateY(60px)} }
+
+    .wrap {
+      position: relative; z-index: 1;
+      max-width: 660px; width: 92%;
+      text-align: center;
+      padding: 20px 0 40px;
+      animation: fadeUp 0.9s ease both;
+    }
+    @keyframes fadeUp {
+      from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)}
+    }
+
+    /* Logo */
+    .m-logo { display:flex; align-items:center; justify-content:center; gap:14px; margin-bottom:52px; text-decoration:none; }
+    .m-logo-main { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:700; color:var(--white); letter-spacing:2px; line-height:1; display:block; }
+    .m-logo-sub { font-size:0.58rem; font-weight:500; letter-spacing:3.5px; color:var(--gold-lt); text-transform:uppercase; display:block; margin-top:3px; }
+
+    /* Icon */
+    .m-icon-wrap {
+      width:100px; height:100px;
+      background: linear-gradient(135deg, var(--g-dark), var(--g-mid));
+      border-radius:28px;
+      display:flex; align-items:center; justify-content:center;
+      margin: 0 auto 30px;
+      box-shadow: 0 8px 40px rgba(26,92,42,0.5), 0 0 0 1px rgba(200,168,75,0.2);
+      animation: iconFloat 4s ease-in-out infinite;
+    }
+    @keyframes iconFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .m-icon-wrap svg { width:48px; height:48px; stroke:var(--gold-lt); }
+
+    /* Status */
+    .m-status {
+      display:inline-flex; align-items:center; gap:8px;
+      background: rgba(26,92,42,0.3);
+      border: 1px solid rgba(26,92,42,0.6);
+      color: #7fd48f;
+      padding:7px 20px; border-radius:50px;
+      font-size:0.72rem; font-weight:700; letter-spacing:2.5px; text-transform:uppercase;
+      margin-bottom:28px;
+    }
+    .m-status-dot { width:7px;height:7px;background:#5cc470;border-radius:50%;animation:pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.4)} }
+
+    /* Heading */
+    .m-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.4rem,5.5vw,3.6rem); font-weight:700; line-height:1.1; margin-bottom:18px; color:var(--white); }
+    .m-title em { color:var(--gold-lt); font-style:italic; }
+    .m-desc { font-size:0.95rem; color:rgba(255,255,255,0.6); line-height:1.75; font-weight:300; max-width:500px; margin:0 auto 40px; }
+
+    /* Features */
+    .m-features { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-bottom:44px; text-align:left; }
+    .m-feature {
+      display:flex; align-items:center; gap:12px;
+      background:rgba(26,92,42,0.15);
+      border:1px solid rgba(26,92,42,0.3);
+      border-radius:12px; padding:15px 18px;
+      transition:var(--transition);
+    }
+    .m-feature:hover { background:rgba(26,92,42,0.3); border-color:rgba(200,168,75,0.3); }
+    .m-feature-dot { width:8px;height:8px;background:#5cc470;border-radius:50%;flex-shrink:0; }
+    .m-feature span { font-size:0.85rem;color:rgba(255,255,255,0.75); }
+
+    /* Divider */
+    .m-divider { width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(26,92,42,0.6),transparent);margin-bottom:36px; }
+
+    /* Contact */
+    .m-contact {
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px; padding:28px 32px; margin-bottom:36px;
+    }
+    .m-contact p { font-size:0.88rem;color:rgba(255,255,255,0.55);margin-bottom:18px;font-weight:300;line-height:1.7; }
+    .m-contact strong { color:var(--gold-lt);font-weight:600; }
+    .m-actions { display:flex;gap:12px;justify-content:center;flex-wrap:wrap; }
+    .btn-gold {
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--gold);color:var(--dark);
+      font-family:'Outfit',sans-serif;font-weight:700;font-size:0.88rem;
+      padding:13px 26px;border-radius:50px;text-decoration:none;
+      box-shadow:0 4px 20px rgba(200,168,75,0.35); transition:var(--transition);
+    }
+    .btn-gold:hover { background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 10px 36px rgba(200,168,75,0.55); }
+    .btn-ghost {
+      display:inline-flex;align-items:center;gap:8px;
+      background:transparent;color:rgba(255,255,255,0.75);
+      font-family:'Outfit',sans-serif;font-weight:600;font-size:0.88rem;
+      padding:13px 26px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.3);text-decoration:none;
+      transition:var(--transition);
+    }
+    .btn-ghost:hover { border-color:var(--white);background:rgba(255,255,255,0.08);transform:translateY(-2px); }
+
+    /* Back */
+    .m-back {
+      display:inline-flex;align-items:center;gap:8px;
+      color:rgba(255,255,255,0.4);font-size:0.82rem;text-decoration:none;
+      transition:var(--transition);margin-top:6px;
+    }
+    .m-back:hover { color:var(--gold-lt); }
+    .m-back svg { transition:transform var(--transition); }
+    .m-back:hover svg { transform:translateX(-4px); }
+
+    .m-footer-note { position:fixed;bottom:20px;left:0;right:0;text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.18);z-index:1; }
+
+    @media(max-width:540px) {
+      .m-features { grid-template-columns:1fr; }
+      .m-contact { padding:20px 16px; }
+      .m-actions { flex-direction:column;align-items:center; }
+      .btn-gold,.btn-ghost { width:100%;justify-content:center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <div class="bg-grid"></div>
+
+  <main class="wrap">
+
+    <!-- Logo -->
+    <a href="index.html" class="m-logo">
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+        <circle cx="42" cy="46" r="28" fill="none" stroke="#c8a84b" stroke-width="3"/>
+        <ellipse cx="42" cy="46" rx="12" ry="28" fill="none" stroke="#c8a84b" stroke-width="2"/>
+        <line x1="14" y1="46" x2="70" y2="46" stroke="#c8a84b" stroke-width="2"/>
+        <line x1="17" y1="33" x2="67" y2="33" stroke="#c8a84b" stroke-width="1.5"/>
+        <line x1="17" y1="59" x2="67" y2="59" stroke="#c8a84b" stroke-width="1.5"/>
+        <g transform="translate(52,14) rotate(40)">
+          <path d="M0 0 L-6 4 L0 2 L6 4 Z" fill="#ffffff"/>
+          <path d="M-3 2 L-6 7 L0 5 Z" fill="rgba(255,255,255,0.6)"/>
+          <path d="M3 2 L6 7 L0 5 Z" fill="rgba(255,255,255,0.6)"/>
+        </g>
+      </svg>
+      <div>
+        <span class="m-logo-main">EXPROVE</span>
+        <span class="m-logo-sub">PASSPORT LIMITED</span>
+      </div>
+    </a>
+
+    <!-- Icon -->
+    <div class="m-icon-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M23 4v6h-6"/>
+        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+      </svg>
+    </div>
+
+    <!-- Status -->
+    <div class="m-status">
+      <span class="m-status-dot"></span>
+      Coming Soon
+    </div>
+
+    <!-- Title -->
+    <h1 class="m-title">Passport<br/><em>Renewal</em></h1>
+    <p class="m-desc">We're putting the finishing touches on our online passport renewal service. Very soon you'll be able to submit your renewal request directly through our platform with expert support every step of the way.</p>
+
+    <!-- Features -->
+    <div class="m-features">
+      <div class="m-feature"><span class="m-feature-dot"></span><span>Renewal Form Preparation</span></div>
+      <div class="m-feature"><span class="m-feature-dot"></span><span>Old Passport Review</span></div>
+      <div class="m-feature"><span class="m-feature-dot"></span><span>Biometric Appointment Booking</span></div>
+      <div class="m-feature"><span class="m-feature-dot"></span><span>Document Verification</span></div>
+      <div class="m-feature"><span class="m-feature-dot"></span><span>Express Renewal Options</span></div>
+      <div class="m-feature"><span class="m-feature-dot"></span><span>Progress Tracking & Updates</span></div>
+    </div>
+
+    <div class="m-divider"></div>
+
+    <!-- Contact -->
+    <div class="m-contact">
+      <p>Need to renew your passport <strong>right now</strong>?<br/>Our team is available to assist you directly today.</p>
+      <div class="m-actions">
+        <a href="tel:0500639478" class="btn-gold">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Us Now
+        </a>
+        <a href="mailto:exprovepassportlimited.2025@gmail.com" class="btn-ghost">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email Us
+        </a>
+      </div>
+    </div>
+
+    <a href="passport-application.html" class="m-back">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Back to Passport Services
+    </a>
+
+  </main>
+
+  <p class="m-footer-note">© 2026 Exprove Passport Limited. All rights reserved.</p>
+</body>
+</html>
