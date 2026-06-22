@@ -1,0 +1,20 @@
+{
+  "name": "exprove-passport-limited",
+  "version": "1.0.0",
+  "description": "Ghana's most trusted passport processing and birth certificate assistance company",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "lint": "echo 'No linter configured for static HTML project'"
+  },
+  "keywords": [
+    "passport",
+    "ghana",
+    "exprove"
+  ],
+  "author": "Exprove Passport Limited",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  }
+}
