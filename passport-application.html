@@ -23,6 +23,10 @@
       --text:      #1e3a26;
       --text-mid:  #3d5c46;
       --text-lt:   #6a8a72;
+      --red-dk:    #9c3b2e;
+      --red-mid:   #c14f3d;
+      --red-lt:    #e0765f;
+      --red-pale:  #fdefec;
       --border:    rgba(26,92,42,0.12);
       --shadow-md: 0 8px 40px rgba(13,31,18,0.12);
       --shadow-lg: 0 20px 80px rgba(13,31,18,0.18);
@@ -273,9 +277,9 @@
     /* ── Service Cards ── */
     .pp-cards {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 28px;
-      max-width: 1000px;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
@@ -303,6 +307,7 @@
     }
     .pp-card.new-app .pp-card-band  { background: linear-gradient(90deg, var(--g-dark), var(--g-light)); }
     .pp-card.renewal .pp-card-band  { background: linear-gradient(90deg, var(--gold-dk), var(--gold-lt)); }
+    .pp-card.missing .pp-card-band  { background: linear-gradient(90deg, var(--red-dk), var(--red-lt)); }
 
     .pp-card-body {
       padding: 36px 36px 32px;
@@ -324,6 +329,8 @@
     .pp-card.new-app .pp-card-icon svg { stroke: var(--g-dark); }
     .pp-card.renewal .pp-card-icon { background: #fdf8ec; }
     .pp-card.renewal .pp-card-icon svg { stroke: var(--gold-dk); }
+    .pp-card.missing .pp-card-icon { background: var(--red-pale); }
+    .pp-card.missing .pp-card-icon svg { stroke: var(--red-dk); }
     .pp-card-icon svg { width: 34px; height: 34px; }
 
     .pp-card-tag {
@@ -341,6 +348,7 @@
     }
     .pp-card.new-app .pp-card-tag { background: var(--g-pale); color: var(--g-dark); }
     .pp-card.renewal .pp-card-tag { background: #fdf8ec; color: var(--gold-dk); }
+    .pp-card.missing .pp-card-tag { background: var(--red-pale); color: var(--red-dk); }
 
     .pp-card h3 {
       font-family: 'Cormorant Garamond', serif;
@@ -386,6 +394,8 @@
     .pp-card.new-app .feature-check svg { stroke: var(--g-dark); }
     .pp-card.renewal .feature-check { background: #fdf8ec; }
     .pp-card.renewal .feature-check svg { stroke: var(--gold-dk); }
+    .pp-card.missing .feature-check { background: var(--red-pale); }
+    .pp-card.missing .feature-check svg { stroke: var(--red-dk); }
     .feature-check svg { width: 10px; height: 10px; }
 
     /* Card CTA */
@@ -422,6 +432,16 @@
       background: linear-gradient(135deg, var(--gold), var(--gold-lt));
       transform: translateY(-2px);
       box-shadow: 0 10px 36px rgba(200,168,75,0.55);
+    }
+    .pp-card.missing .pp-card-btn {
+      background: linear-gradient(135deg, var(--red-dk), var(--red-mid));
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(156,59,46,0.3);
+    }
+    .pp-card.missing .pp-card-btn:hover {
+      background: linear-gradient(135deg, var(--red-mid), var(--red-lt));
+      transform: translateY(-2px);
+      box-shadow: 0 10px 36px rgba(156,59,46,0.5);
     }
 
     /* ── Info strip ── */
@@ -477,8 +497,11 @@
     .pp-footer a:hover { color: var(--white); }
 
     /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .pp-cards { grid-template-columns: 1fr 1fr; max-width: 760px; }
+    }
     @media (max-width: 760px) {
-      .pp-cards { grid-template-columns: 1fr; }
+      .pp-cards { grid-template-columns: 1fr; max-width: 100%; }
       .nav-links { display: none; }
       .nav-container { padding: 0 20px; }
       .pp-hero { padding: 70px 20px 60px; }
@@ -663,6 +686,52 @@
             </ul>
             <a href="maintenance-passport-renewal.html" class="pp-card-btn">
               Renew My Passport
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ── MISSING PASSPORT ── -->
+        <div class="pp-card missing">
+          <div class="pp-card-band"></div>
+          <div class="pp-card-body">
+            <div class="pp-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 9v4"/>
+                <path d="M12 17h.01"/>
+                <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              </svg>
+            </div>
+            <div class="pp-card-tag">
+              <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Lost or Stolen Passport
+            </div>
+            <h3>Missing Passport</h3>
+            <p>Lost or had your passport stolen? We help you report it and guide you through the replacement process quickly, so you can get back on track with minimal stress.</p>
+            <ul class="pp-features">
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Loss/Theft Report Guidance
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Replacement Form Assistance
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Biometric Appointment Booking
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Official Submission Support
+              </li>
+              <li>
+                <span class="feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                Progress Tracking & Updates
+              </li>
+            </ul>
+            <a href="https://forms.gle/C1e6YfwKtVxfZrBVA" target="_blank" class="pp-card-btn">
+              Report Missing Passport
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
